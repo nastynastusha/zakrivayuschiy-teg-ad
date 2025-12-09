@@ -136,3 +136,51 @@
   padding: 12.5px;
   border: 2px solid var(--Themes-mainColor, #000000);
 }
+
+.memory-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.memory-dialog[open] {
+  max-width: 353px;
+  display: flex;     
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  padding: 30px;
+  border: 2px solid var(--Themes-mainColor, #000000);
+  background: #ffffff;
+}
+
+.dialog-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+
+}
+
+.dialog-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 2px solid var(--Themes-mainColor, #000000);
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  padding: 12.5px;
+}
