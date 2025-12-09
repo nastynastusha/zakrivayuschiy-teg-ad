@@ -14,3 +14,31 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
+
+.header {
+  font-family: var(--font-accent);
+  width: var(--header-width);
+  background-color: #FFFFFF;
+  padding: 128px 0;
+  margin: 100px auto;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--Themes-mainColor, #000000)
+}
+.header h1{
+  font-size: 65px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  text-transform: uppercase;
+}
+.header p{
+  font-size: 23px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}

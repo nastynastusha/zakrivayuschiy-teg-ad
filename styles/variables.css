@@ -3,4 +3,5 @@
   --font-accent: 'PressStart2P', cursive;
   --font-weight-card-text: 400;
   --font-weight-card-title: 700;
+  --header-width: clamp(375px, 100vw, 700px);
 }
