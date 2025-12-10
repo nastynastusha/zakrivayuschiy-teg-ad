@@ -22,22 +22,23 @@
   align-items: center;
   border: 2px solid var(--Themes-mainColor, #000000)
 }
-.header h1{
+
+.header h1 {
   font-size: 65px;
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: bottom;
   text-transform: uppercase;
 }
-.header p{
+
+.header p {
   font-size: 23px;
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: uppercase;
 }
 
-
-@media (width<=450px){
+@media (width<=450px) {
     .header{
       padding: 120px 0;
     }
@@ -49,25 +50,29 @@
     }
 }
 
-main{
+main {
   margin: 0 auto;
   width: var(--header-width);
 }
-.card{
+
+.card {
   background-color: #FFFFFF;
   margin-bottom: 50px;
 }
-.card h3{
+
+.card h3 {
   color: var(--Themes-mainColor, #000000);
   padding: 10px 3px;
   border: 2px solid var(--Themes-mainColor, #000000);
   font-weight: 700;
   font-size: 18px;
 }
-.card h3 br{
+
+.card h3 br {
   display: none;
 }
-.card-img{
+
+.card-img {
   position: relative;
   background-image: url('../images/car1.png');
   width: var(--header-width);
@@ -78,7 +83,8 @@ main{
   background-position: right;
   background-size: cover;
 }
-.card-img span{
+
+.card-img span {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -94,7 +100,6 @@ main{
     text-shadow: none;
   }
 
-  /* Фоллбэк для браузеров без text-stroke */
   @supports not (-webkit-text-stroke: 1px black) {
     text-shadow: 
       1px 1px 0 var(--label-stroke-color),
@@ -104,7 +109,7 @@ main{
   }
 }
 
-.card-text{
+.card-text {
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -113,13 +118,16 @@ main{
   border-right: 2px solid var(--Themes-mainColor, #000000);
   font-size: 18px;
 }
-.main-text{
+
+.main-text {
   margin-bottom: 27px;
 }
-.sub-text{
+
+.sub-text {
   margin-bottom: 25px;
 }
-.button_like{
+
+.button_like {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,14 +138,15 @@ main{
   background-color: #FFFFFF;
   border: none;
 }
-.like-text{
+
+.like-text {
   width: 130px;
   background-color: #FFFFFF;
   cursor: pointer;
   padding: 12.5px;
   border: 2px solid var(--Themes-mainColor, #000000);
-  
 }
+
 .like-text,
 .button__diskette,
 .dialog-button {
@@ -146,6 +155,7 @@ main{
   overflow: hidden; /* нужно для translate */
   transition: box-shadow 0.3s ease;
 }
+
 .button__text {
   color: #FFFFFF;
   border-color: #FFFFFF;
@@ -160,7 +170,6 @@ main{
   z-index: 2;
   mix-blend-mode: difference; /* иконка остаётся видимой на чёрном фоне */
 }
-
 
 /* Псевдоэлемент для эффекта появления */
 .like-text::before,
@@ -202,7 +211,7 @@ main{
   border-color: var(--contour-color);
   box-shadow: 2px 2px 0 var(--contour-color);
 }
-.button__diskette{
+.button__diskette {
   color: #FFFFFF;
   position: relative;
   background-color: #FFFFFF;
@@ -220,7 +229,7 @@ main{
   border: 2px solid var(--Themes-mainColor, #000000);
 }
 
-@media (width<=450px){
+@media (width<=450px) {
   .card{
       
     margin-bottom: 52px;
@@ -236,7 +245,7 @@ main{
     flex-direction: column;
   }
 }
-.lowercase{
+.lowercase {
   text-transform: lowercase !important;
 }
 
@@ -257,7 +266,7 @@ main{
   background: #ffffff;
 }
 
-.dialog-content{
+.dialog-content {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -265,7 +274,7 @@ main{
   align-items: center;
 }
 
-.dialog-inner{
+.dialog-inner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,7 +285,7 @@ main{
 
 }
 
-.dialog-button{
+.dialog-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,14 +296,10 @@ main{
   text-transform: uppercase;
   padding: 12.5px;
 }
-.dialog-icon svg{
+.dialog-icon svg {
   mix-blend-mode: difference;
 }
-/*Heart*/
 
-
-
-/* 1. Усиленный контраст */
 .img-contrast {
   filter: contrast(1.6);
 }
