@@ -5,6 +5,8 @@
   --font-weight-card-title: 700;
   --header-width: clamp(375px, 100vw, 700px);
   --label-stroke-color: #ffffff;
+  --animation-fill-color: #ff0000; 
+  --contour-color: #000000;  
   --page-background: 
     /* 1. повторяющиеся полоски слева направо */
     repeating-linear-gradient(
