@@ -10,7 +10,7 @@
 
 .like-icon .core,
 .like-icon .main-body {
-  fill: none; 
+  fill: none;
   opacity: 0;
   transition: opacity 0.35s ease, fill 0.2s ease;
 }
@@ -21,9 +21,11 @@
   fill: #000;   /* при наведении черный */
   opacity: 1;
 }
+
 .like-icon:not(.is-liked):hover .contour {
   fill: #000;
 }
+
 /*ACTIVE*/
 .card__like-button:active .like-icon .core,
 .card__like-button:active .like-icon .main-body {
@@ -32,8 +34,7 @@
 }
 
 /* КЛИК (is-liked)*/
-.like-icon.is-liked .core,
-.like-icon.is-liked .main-body {
+.like-icon.is-liked .core,.like-icon.is-liked .main-body {
   fill: var(--animation-fill-color); 
   opacity: 1;
 }
@@ -54,10 +55,20 @@
 }
 
 @keyframes heart-bump {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.25); }
-  100% { transform: scale(1); }
+ 
+    0% { 
+    transform: scale(1);
+       }
+
+  50%  { 
+    transform: scale(1.25); 
+       }
+
+  100% {
+     transform: scale(1); 
+       }
 }
+
 .like-icon.is-liked .heart {
   animation: heart-bump 0.3s ease-in 0.1s 1;
 }

@@ -5,7 +5,7 @@
   font-variation-settings: "wght" var(--font-weight-card-text);
   background-image: var(--page-background);
   background-size: 4px 4px, 4px 4px, cover;       /* фон занимает всё пространство */
-  background-attachment: fixed; 
+  background-attachment: fixed;
 }
 
 .header {
@@ -39,13 +39,18 @@
 }
 
 @media (width<=450px) {
-    .header{
+    .header
+    {
       padding: 120px 0;
     }
-    .header h1{
+
+    .header h1
+    {
       font-size: 49px;
     }
-    .header p{
+
+    .header p
+    {
       font-size: 14px;
     }
 }
@@ -230,21 +235,24 @@ main {
 }
 
 @media (width<=450px) {
-  .card{
-      
+  .card {
     margin-bottom: 52px;
   }
-  .card-img{
+
+  .card-img {
     height: 375px;
   }
-  .card h3 br{
+
+  .card h3 br {
     display: inherit;
   }
-  .button__diskette{
+
+  .button__diskette {
     margin-bottom: 100px;
     flex-direction: column;
   }
 }
+
 .lowercase {
   text-transform: lowercase !important;
 }
@@ -282,7 +290,6 @@ main {
   line-height: 150%;
   letter-spacing: 0%;
   text-transform: uppercase;
-
 }
 
 .dialog-button {
