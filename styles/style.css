@@ -5,7 +5,7 @@
   font-variation-settings: "wght" var(--font-weight-card-text);
   background-image: var(--page-background);
   background-size: 4px 4px, 4px 4px, cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
 }
 
 .header {
@@ -70,7 +70,7 @@ main {
   font-size: 18px;
 }
 
-.card h3 br { 
+.card h3 br {
   display: none;
 }
 
@@ -217,7 +217,7 @@ main {
   box-shadow: 2px 2px 0 var(--contour-color);
 }
 
-.button__diskette{
+.button__diskette {
   color: #FFFFFF;
   position: relative;
   background-color: #FFFFFF;
@@ -236,23 +236,19 @@ main {
 }
 
 @media (width<=450px) {
-  .card
-  {
+  .card {
     margin-bottom: 52px;
   }
 
-  .card-img
-  {
+  .card-img {
     height: 375px;
   }
 
-  .card h3 br
-  {
+  .card h3 br {
     display: inherit;
   }
 
-  .button__diskette
-  {
+  .button__diskette {
     margin-bottom: 100px;
     flex-direction: column;
   }
@@ -263,12 +259,12 @@ main {
 }
 
 .memory-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .memory-dialog[open] {
   max-width: 353px;
-  display: flex;     
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

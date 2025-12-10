@@ -57,19 +57,16 @@
 
 @keyframes heart-bump {
 
-  0%    {
+  0% {
      transform: scale(1); 
-     
-    }
+     }
 
-  50%  {
+  50% {
      transform: scale(1.25);
-    
     }
 
   100% {
      transform: scale(1); 
-    
     }
 }
 
@@ -78,19 +75,16 @@
 }
 
 @keyframes sparks-flash {
-  0%   {
+  0% {
      opacity: 0;
-    
     }
 
-  50%  { 
+  50% { 
      opacity: 1;
-
     }
 
   100% {
      opacity: 0;
-
     }
 }
 .like-icon.is-liked .sparks {
