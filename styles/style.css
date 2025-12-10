@@ -4,7 +4,7 @@
   font-family: var(--font-main);
   font-variation-settings: "wght" var(--font-weight-card-text);
   background-image: var(--page-background);
-  background-size: 4px 4px, 4px 4px, cover;
+  background-size: 4px 4px, 4px 4px, cover;       /* фон занимает всё пространство */
   background-attachment: fixed; 
 }
 
@@ -22,7 +22,6 @@
   align-items: center;
   border: 2px solid var(--Themes-mainColor, #000000)
 }
-
 .header h1{
   font-size: 65px;
   line-height: 100%;
@@ -30,18 +29,34 @@
   vertical-align: bottom;
   text-transform: uppercase;
 }
-
 .header p{
   font-size: 23px;
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: uppercase;
 }
+
+
+@media (width<=450px){
+    .header{
+      padding: 120px 0;
+    }
+    .header h1{
+      font-size: 49px;
+    }
+    .header p{
+      font-size: 14px;
+    }
+}
+
+main{
+  margin: 0 auto;
+  width: var(--header-width);
+}
 .card{
   background-color: #FFFFFF;
   margin-bottom: 50px;
 }
-
 .card h3{
   color: var(--Themes-mainColor, #000000);
   padding: 10px 3px;
@@ -49,11 +64,9 @@
   font-weight: 700;
   font-size: 18px;
 }
-
 .card h3 br{
   display: none;
 }
-
 .card-img{
   position: relative;
   background-image: url('../images/car1.png');
@@ -65,7 +78,6 @@
   background-position: right;
   background-size: cover;
 }
-
 .card-img span{
   position: absolute;
   top: 25px;
@@ -101,15 +113,12 @@
   border-right: 2px solid var(--Themes-mainColor, #000000);
   font-size: 18px;
 }
-
 .main-text{
   margin-bottom: 27px;
 }
-
 .sub-text{
   margin-bottom: 25px;
 }
-
 .button_like{
   display: flex;
   justify-content: center;
@@ -121,13 +130,114 @@
   background-color: #FFFFFF;
   border: none;
 }
-
 .like-text{
   width: 130px;
   background-color: #FFFFFF;
   cursor: pointer;
   padding: 12.5px;
   border: 2px solid var(--Themes-mainColor, #000000);
+  
+}
+.like-text,
+.button__diskette,
+.dialog-button {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; /* нужно для translate */
+  transition: box-shadow 0.3s ease;
+}
+.button__text {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  position: relative;
+  z-index: 1; /* текст выше псевдоэлемента */
+  mix-blend-mode: difference; /* перекрашивание при перекрытии */
+  transition: color 0.5s ease-in-out;
+}
+
+.button__diskette svg {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference; /* иконка остаётся видимой на чёрном фоне */
+}
+
+
+/* Псевдоэлемент для эффекта появления */
+.like-text::before,
+.button__diskette::before,
+.dialog-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transform: translateX(-100%); /* изначально скрыт */
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+/* При наведении псевдоэлемент плавно появляется */
+.like-text:hover::before,
+.button__diskette:hover::before,
+.dialog-button:hover::before {
+  transform: translateX(0);
+}
+
+/* Фокус для кнопок */
+.like-text:focus,
+.button__diskette:focus,
+.dialog-button:focus {
+  outline: none;
+  
+}
+
+/* Фокус для кнопки с сердцем */
+.like-text:focus {
+  outline: none;
+}
+
+.like-text:focus-visible {
+  border-color: var(--contour-color);
+  box-shadow: 2px 2px 0 var(--contour-color);
+}
+.button__diskette{
+  color: #FFFFFF;
+  position: relative;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  margin-bottom: 103px;
+  max-width: 335px;
+  font-family: var(--font-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  padding: 15px 0;
+  vertical-align: middle;
+  border: 2px solid var(--Themes-mainColor, #000000);
+}
+
+@media (width<=450px){
+  .card{
+      
+    margin-bottom: 52px;
+  }
+  .card-img{
+    height: 375px;
+  }
+  .card h3 br{
+    display: inherit;
+  }
+  .button__diskette{
+    margin-bottom: 100px;
+    flex-direction: column;
+  }
+}
+.lowercase{
+  text-transform: lowercase !important;
 }
 
 .memory-dialog::backdrop {
@@ -177,21 +287,41 @@
   text-transform: uppercase;
   padding: 12.5px;
 }
+.dialog-icon svg{
+  mix-blend-mode: difference;
+}
+/*Heart*/
 
 
-@media (width<=450px){
-  .card{
-      
-    margin-bottom: 52px;
-  }
-  .card-img{
-    height: 375px;
-  }
-  .card h3 br{
-    display: inherit;
-  }
-  .button__diskette{
-    margin-bottom: 100px;
-    flex-direction: column;
-  }
+
+/* 1. Усиленный контраст */
+.img-contrast {
+  filter: contrast(1.6);
+}
+/* 2. Инверсия */
+.img-invert {
+  filter: invert(1);
+}
+/* 3. Сепия — винтаж */
+.img-sepia {
+  filter: sepia(0.9);
+}
+
+/* 4. Чёрно-белый */
+.img-grayscale {
+  filter: grayscale(1);
+}
+
+/* 5. Яркость */
+.img-bright {
+  filter: brightness(2);
+}
+/* 6. Поворот оттенков */
+.img-hue {
+  filter: hue-rotate(120deg);
+}
+
+/* 7. Сочетание — уникальный микс */
+.img-multi {
+  filter: contrast(1.2) saturate(1.5) hue-rotate(45deg);
 }
